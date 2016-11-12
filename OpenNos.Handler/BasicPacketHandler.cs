@@ -1186,7 +1186,7 @@ namespace OpenNos.Handler
         {
             string[] packetsplit = packet.Split(' ');
             string message = String.Empty;
-            for (int i = (packetsplit[0] == "GM" ? 3 : 2); i < packetsplit.Length; i++)
+            for (int i = (packetsplit[0] == "/GM" ? 3 : 2); i < packetsplit.Length; i++)
             {
                 message += packetsplit[i] + " ";
             }
@@ -1199,7 +1199,7 @@ namespace OpenNos.Handler
 
             Session.SendPacket(Session.Character.GenerateSpk(message, 5));
 
-            bool? GmPvtBlock = ServerManager.Instance.GetProperty<bool?>(packetsplit[1].Substring(1), nameof(Character.GmPvtBlock));
+            bool? GmPvtBlock = ServerManager.Instance.GetProperty<bool?>(packetsplit[(packetsplit[0] == "/GM" ? 2 : 1)].Substring(1), nameof(Character.GmPvtBlock));
             if (GmPvtBlock.HasValue)
             {
                 if (GmPvtBlock.Value)
@@ -1213,12 +1213,12 @@ namespace OpenNos.Handler
                 Session.SendPacket(Session.Character.GenerateInfo(Language.Instance.GetMessageFromKey("USER_NOT_CONNECTED")));
             }
 
-            bool? whisperBlocked = ServerManager.Instance.GetProperty<bool?>(packetsplit[1].Substring(1), nameof(Character.WhisperBlocked));
+            bool? whisperBlocked = ServerManager.Instance.GetProperty<bool?>(packetsplit[(packetsplit[0] == "/GM" ? 2 : 1].Substring(1), nameof(Character.WhisperBlocked));
             if (whisperBlocked.HasValue)
             {
                 if (!whisperBlocked.Value || Session.Account.Authority == AuthorityType.Admin)
                 {
-                    ServerManager.Instance.Broadcast(Session, Session.Character.GenerateSpk(message, (Session.Account.Authority == AuthorityType.Admin ? 15 : 5)), ReceiverType.OnlySomeone, packetsplit[1].Substring(1));
+                    ServerManager.Instance.Broadcast(Session, Session.Character.GenerateSpk(message, (Session.Account.Authority == AuthorityType.Admin ? 15 : 5)), ReceiverType.OnlySomeone, packetsplit[(packetsplit[0] == "/GM" ? 2 : 1].Substring(1));
                 }
                 else
                 {
