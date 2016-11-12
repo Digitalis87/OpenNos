@@ -1186,7 +1186,7 @@ namespace OpenNos.Handler
         {
             string[] packetsplit = packet.Split(' ');
             string message = String.Empty;
-            for (int i = 2; i < packetsplit.Length; i++)
+            for (int i = (packetsplit[0] == "GM" ? 3 : 2); i < packetsplit.Length; i++)
             {
                 message += packetsplit[i] + " ";
             }
