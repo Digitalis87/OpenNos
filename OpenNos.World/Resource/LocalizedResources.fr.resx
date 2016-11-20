@@ -208,7 +208,7 @@
     <value>Vous devez être niveau 30 minimum pour pouvoir admirer quelqu'un.</value>
   </data>
   <data name="COMPLIMENT_RECEIVED" xml:space="preserve">
-    <value>Vous avez été admiré {0}.</value>
+    <value>Vous avez été admiré par {0}.</value>
   </data>
   <data name="CORRUPTED_KEEPALIVE" xml:space="preserve">
     <value>Corrupted Keepalive on client {0}.</value>
@@ -235,7 +235,7 @@
     <value>À partir de maintenant, tu débloques les émoticônes.</value>
   </data>
   <data name="EQ_NOT_EMPTY" xml:space="preserve">
-    <value>Éliminez l'équipement que vous portez.</value>
+    <value>Retirez l'équipement que vous portez.</value>
   </data>
   <data name="EXCHANGE_BLOCKED" xml:space="preserve">
     <value>À partir de maintenant, tu bloques les demandes d'échanges.</value>
@@ -415,7 +415,7 @@
     <value>Je commence à me sentir mal...</value>
   </data>
   <data name="NOT_MASTER" xml:space="preserve">
-    <value>Tu ne peux pas changer le mode du groupe si tu n'es pas le maître du groupe.</value>
+    <value>Tu ne peux pas changer le mode du groupe car tu n'es pas le maître du groupe.</value>
   </data>
   <data name="NO_ENTRY" xml:space="preserve">
     <value>Pas de point d'entrée trouvé</value>
@@ -460,7 +460,7 @@
     <value>Élement</value>
   </data>
   <data name="PERFECTSP_FAILURE" xml:space="preserve">
-    <value>Perfectionnement de la carte spécialiste a échoué !</value>
+    <value>Le perfectionnement de la carte spécialiste a échoué !</value>
   </data>
   <data name="PERFECTSP_FIRE" xml:space="preserve">
     <value>Feu</value>
@@ -475,7 +475,7 @@
     <value>Obscurité</value>
   </data>
   <data name="PERFECTSP_SUCCESS" xml:space="preserve">
-    <value>Perfectionnement de la carte spécialiste réussi : {0} +{1} !</value>
+    <value>Le perfectionnement de la carte spécialiste réussi : {0} +{1} !</value>
   </data>
   <data name="PERFECTSP_WATER" xml:space="preserve">
     <value>Eau</value>
@@ -646,7 +646,7 @@
     <value>Ton niveau héroïque a bien été changé !</value>
   </data>
   <data name="LOSE_DIGNITY" xml:space="preserve">
-    <value>Dignité réduite : --{0}</value>
+    <value>Dignité réduite : -{0}</value>
   </data>
   <data name="MUTE_END" xml:space="preserve">
     <value>La sanction est terminée.</value>
